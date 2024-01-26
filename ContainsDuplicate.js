@@ -1,4 +1,7 @@
-let numbers = [1, 2, 3, 4,1]
+let numbers = [1, 2, 3, 4]
+// Question:
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
 
 
 // solution 1
@@ -34,8 +37,8 @@ console.log(solution())
 let ary = []
 const solution2 = () => {
     for (num of numbers) {
-        if(ary.includes(num)){
-           return true
+        if (ary.includes(num)) {
+            return true
         }
         ary.push(num)
     }
@@ -45,8 +48,8 @@ const solution2 = () => {
 solution2()
 
 // solution 5 with Set
-const numberSet=[...new Set(numbers)]
-function solution3(){
-    return numberSet!==numbers
+const numberSet = [...new Set(numbers)]
+function solution3() {
+    return numberSet.length != numbers.length
 }
 console.log(solution3())
